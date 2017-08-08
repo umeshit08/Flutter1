@@ -1,0 +1,70 @@
+<% if !user_signed_in? #if the user is not signed in , render this %>
+<style>
+    body{
+        background:linear-gradient( /*for transparent bg images- */
+            rgba(0,0,0,0.7),
+            rgba(0,0,0,0.7)
+        ),url("/clg.jpg") no-repeat center center fixed; 
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    -background-size:cover;
+        }
+        h1{
+            color:white;
+            font-weight:bold;
+        }
+        .container-index{
+            margin-right:15%;
+            margin-left:15%;
+        }
+        .text{
+             color:white;
+             font-weight:300;
+             font-size:150%;
+        }
+        .footer-links{
+            color:white;
+            text-align:center;
+            margin-top:30%;
+            font-size:75%;
+        }
+        .log-in{
+            float:right;
+            width:300px;
+            height:150px;
+            margin-top:7.5%;
+        }
+        .sign-up{
+            float:right;
+            width:300px;
+            height:250px;
+        }
+</style>
+<div class="container-index row">
+    <div class="col-sm-6">
+    <h1>Welcome to Flutter.</h1>
+    <p class="text">Connect with your buddies.Chat with new friends. <br>
+    Share your adventures.Have Fun!<br>
+    Just like a blog, but with less characters!</p>
+    </div>
+    <div class="col-sm-6">
+        <div class="log-in panel">
+        Log In
+    </div>
+      <div class="sign-up panel">
+        Sign Up
+    </div>
+    </div>
+    <div class="col-sm-12">
+    <p class="footer-links">About   Help  Blog  Status  Jobs  Term  Privacy  Cookies  Ads  info  Brand  Advertise 
+    Business  Media Developer  Directory &copy; 2017  Flutter</p>
+</div>
+</div>
+
+<% else # if the user is signed in, render follow%>
+
+<script>document.location="/home"</script>
+
+
+<%end%>
